@@ -44,6 +44,14 @@ def outcome_one(door)
             right_door_two = gets.chomp.upcase
             if right_door_two == 'LEFT'
                 p "You got captured on your first mission, welcome to Camp Alpha 2023"
+                    lrl_door_three = gets.chomp.upcase
+                            if lrl_door_three == 'LEFT'
+                                p "You dropped your phone and it shattered."
+                            elsif lrl_door_three == 'MIDDLE'
+                                p "There's always snow in your driveway."
+                            elsif lrl_door_three == 'RIGHT'
+                                p "You know EVERYTHING about sea turtles."
+                            end
             elsif right_door_two == 'MIDDLE'
                 p "Surprise, double XP token"
             elsif right_door_two == 'RIGHT'
