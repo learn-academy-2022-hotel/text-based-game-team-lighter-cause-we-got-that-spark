@@ -2,17 +2,18 @@
 # player chooses different doors
 p 'Welcome to Life of Doors! Choose a door to see where your life goes. Different doors will earn a different amount of points which will be tallied up at the end. You start with 30 pts, make sure to keep track of your points as you go along. Choose a door (left, right, or middle)'
 first_door = gets.chomp.upcase
-# p first_door
+
 
 def outcome_one(door)
     if door == 'LEFT'
         p 'You got an early tax refund (legally). +10 points. Choose another door (left, right, middle)'
             left_door_two = gets.chomp.upcase
             if left_door_two == 'LEFT'
-                p 'You actually owe twice as much as you got. -20 points. Choose another door:'
+                p "You actually owe twice as much as you got. -20 points. Choose another door:"
+                
                     lll_door_three = gets.chomp.upcase
                     if lll_door_three == 'LEFT'
-                        p "You've now been audited for the last 5 years of taxes, hope you did them right. +/- 5 points, be honest... lol."
+                        p "You've now been audited for the last 5 years of taxes, hope you did them right. +/- 5 points, be honest... lol." 
                     elsif lll_door_three == 'MIDDLE'
                         p "You found a suitcase full of washed money. +50 points."
                     elsif lll_door_three == 'RIGHT'
@@ -100,7 +101,14 @@ def outcome_one(door)
                 p "You found the guy that owns the socks...and he wants them back."
                     mr_door_three = gets.chomp.upcase
                     if mr_door_three == 'LEFT'
-                        p "You challenge him to a duel, you lose, and he takes your pants. -100 points."
+                        p  "You challenge him to a duel, you lose, and he takes your pants. -100 points."
+   puts "
+      \\ / 
+  |_O  X  O_\\ 
+   /`-/ \\-'\\  
+  | \\     / | 
+ /   \\    |  \\  
+ "
                     elsif mr_door_three == 'MIDDLE'
                         p "You challenge him to a duel, you win, but he got away with the socks. +5???? points"
                     elsif mr_door_three == 'RIGHT'
@@ -113,6 +121,7 @@ def outcome_one(door)
 end
 
 outcome_one(first_door)
-
+p "What is your total score?"
+total_tally = gets.chomp
 random_num = rand(-100..100)
-p "Your final score is: #{random_num}!"
+p "Wrong! Your final score is not #{total_tally}! From our calculations it was: #{random_num}"
